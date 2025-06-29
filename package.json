@@ -17,6 +17,7 @@
     "type": "git",
     "url": "git@github.com:charlesshook/strapi-blocks-svelte-renderer.git"
   },
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
