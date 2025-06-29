@@ -1,6 +1,22 @@
 {
-	"name": "strapi-blocks-svelte-renderer",
-	"version": "0.0.1",
+	"name": "@charlesshook/strapi-blocks-svelte-renderer",
+	"version": "0.1.0",
+	"description": "Strapi block renderer for Svelte",
+		"keywords": [
+		"svelte",
+		"strapi",
+		"blocks",
+		"renderer"
+	],
+	"author": "Charles Shook (https://charlesshook.com/)",
+	"homepage": "https://github.com/charlesshook/strapi-blocks-svelte-renderer#readme",
+  "bugs": {
+    "url": "https://github.com/charlesshook/strapi-blocks-svelte-renderer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:charlesshook/strapi-blocks-svelte-renderer.git"
+  },
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
@@ -44,8 +60,5 @@
 		"svelte-check": "^4.0.0",
 		"typescript": "^5.0.0",
 		"vite": "^6.2.6"
-	},
-	"keywords": [
-		"svelte"
-	]
+	}
 }
