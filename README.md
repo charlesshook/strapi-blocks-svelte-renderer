@@ -1,6 +1,7 @@
 # Strapi blocks renderer for Svelte
 
 ## Work in progress
+
 This project is currently a work in progress and not fully complete. Suggestions are welcomed!
 
 ## Installation
@@ -10,6 +11,7 @@ npm install @charlesshook/strapi-blocks-svelte-renderer --save
 ```
 
 ## Components
+
 - **Blocks**
   - paragraph
   - heading
@@ -28,11 +30,37 @@ npm install @charlesshook/strapi-blocks-svelte-renderer --save
 ## Usage
 
 ```svelte
+<script>
+	import BlockRenderer from '@charlesshook/strapi-blocks-svelte-renderer';
 
+	const content = [
+		{ type: 'h1', level: 2, children: [{ text: 'My great title!' }] },
+		{ type: 'paragraph', children: [{ text: 'Strapi blocks renderer in Svelte!' }] },
+		{ type: 'paragraph', children: [{ text: 'This is cool!' }] }
+	];
+</script>
+
+<BlockRenderer {content} />
 ```
 
 ## Custom components
+Coming soon...
 
-```svelte
+## Custom modifiers
+Coming soon...
 
+## Development
+
+### Test locally
+
+At the root of the project directory run:
+
+```
+npm link
+```
+
+Inside the project that you want to add this package to:
+
+```
+npm link @charlesshook/strapi-blocks-svelte-renderer
 ```
