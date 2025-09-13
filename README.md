@@ -1,58 +1,66 @@
-# Svelte library
+# Strapi blocks renderer for Svelte
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+## Work in progress
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+This project is currently a work in progress and not fully complete. Suggestions are welcomed!
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install @charlesshook/strapi-blocks-svelte-renderer --save
 ```
 
-## Developing
+## Components
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- **Blocks**
+  - paragraph
+  - heading
+  - list
+  - quote
+  - code
+  - image
+  - link
+- **Modifiers**
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - code
 
-```bash
-npm run dev
+## Usage
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```svelte
+<script>
+	import BlockRenderer from '@charlesshook/strapi-blocks-svelte-renderer';
+
+	const content = [
+		{ type: 'h1', level: 2, children: [{ text: 'My great title!' }] },
+		{ type: 'paragraph', children: [{ text: 'Strapi blocks renderer in Svelte!' }] },
+		{ type: 'paragraph', children: [{ text: 'This is cool!' }] }
+	];
+</script>
+
+<BlockRenderer {content} />
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## Custom components
+Coming soon...
 
-## Building
+## Custom modifiers
+Coming soon...
 
-To build your library:
+## Development
 
-```bash
-npm run package
+### Test locally
+
+At the root of the project directory run:
+
+```
+npm link
 ```
 
-To create a production version of your showcase app:
+Inside the project that you want to add this package to:
 
-```bash
-npm run build
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+npm link @charlesshook/strapi-blocks-svelte-renderer
 ```
